@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     final int FIELDGOAL = 3;
     final int EXTRA_POINT = 1;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -133,8 +132,6 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
-
     }
-
 
 }

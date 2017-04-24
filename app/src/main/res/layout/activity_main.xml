@@ -44,7 +44,7 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/home_team_name"
             android:layout_marginLeft="@dimen/score_text_margin"
-            android:layout_marginStart="@dimen/score_text_margin"/>
+            android:layout_marginStart="@dimen/score_text_margin" />
 
         <TextView
             android:id="@+id/away_team_name"
@@ -63,9 +63,7 @@
             android:layout_below="@+id/away_team_name"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp" />
-
     </RelativeLayout>
-
 
     <!--
         The components in these RelativeLayout are
@@ -130,7 +128,6 @@
                 android:id="@+id/home_team_extrapoint"
                 style="@style/PointsButton"
                 android:text="@string/score_extrapoint" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -153,9 +150,7 @@
                 android:id="@+id/away_team_extrapoint"
                 style="@style/PointsButton"
                 android:text="@string/score_extrapoint" />
-
         </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout
@@ -176,9 +171,7 @@
             android:layout_marginLeft="@dimen/standard_button_margin"
             android:layout_marginRight="@dimen/standard_button_margin"
             android:layout_marginStart="@dimen/standard_button_margin"
-            android:text="@string/reset_button"
-            android:onClick="resetScore"/>
-
+            android:onClick="resetScore"
+            android:text="@string/reset_button" />
     </LinearLayout>
-
 </LinearLayout>

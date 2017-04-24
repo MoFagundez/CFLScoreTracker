@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.modashmo.cflscoretracker.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:background="@color/colorBackgroundScore">
+
+        <!--
+            This element (imageView) is unique, therefore
+            I haven't used styles.xml as  I did with others
+            Your feedback whether this practice is right or
+            wrong is highly appreciated.
+        -->
+        <ImageView
+            android:id="@+id/cfl_logo"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/standard_text_margin"
+            app:srcCompat="@drawable/cfl_logo" />
+
+        <TextView
+            android:id="@+id/home_team_name"
+            style="@style/TeamName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/standard_text_margin"
+            android:layout_marginStart="@dimen/standard_text_margin"
+            android:text="@string/home_team" />
+
+        <TextView
+            android:id="@+id/home_team_score"
+            style="@style/TeamScore"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/home_team_name"
+            android:layout_marginLeft="@dimen/score_text_margin"
+            android:layout_marginStart="@dimen/score_text_margin"/>
+
+        <TextView
+            android:id="@+id/away_team_name"
+            style="@style/TeamName"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/standard_text_margin"
+            android:layout_marginRight="@dimen/standard_text_margin"
+            android:text="@string/away_team" />
+
+        <TextView
+            android:id="@+id/away_team_score"
+            style="@style/TeamScore"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/away_team_name"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp" />
+
+    </RelativeLayout>
+
+
+    <!--
+        The components in these RelativeLayout are
+        also unique, so no styles.xml were used.
+    -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/text_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_presented_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/presented_by"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="DisableBaselineAlignment">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/home_team_touchdown"
+                style="@style/PointsButton"
+                android:text="@string/score_touchdown" />
+
+            <Button
+                android:id="@+id/home_team_fieldgoal"
+                style="@style/PointsButton"
+                android:text="@string/score_fieldgoal" />
+
+            <Button
+                android:id="@+id/home_team_extrapoint"
+                style="@style/PointsButton"
+                android:text="@string/score_extrapoint" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/away_team_touchdown"
+                style="@style/PointsButton"
+                android:text="@string/score_touchdown" />
+
+            <Button
+                android:id="@+id/away_team_fieldgoal"
+                style="@style/PointsButton"
+                android:text="@string/score_fieldgoal" />
+
+            <Button
+                android:id="@+id/away_team_extrapoint"
+                style="@style/PointsButton"
+                android:text="@string/score_extrapoint" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!--
+             As you may imagine, styles.xml hasn't been used
+             here as well due to the uniqueness of the element.
+        -->
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_button_height"
+            android:layout_marginEnd="@dimen/standard_button_margin"
+            android:layout_marginLeft="@dimen/standard_button_margin"
+            android:layout_marginRight="@dimen/standard_button_margin"
+            android:layout_marginStart="@dimen/standard_button_margin"
+            android:text="@string/reset_button"
+            android:onClick="resetScore"/>
+
+    </LinearLayout>
+
+</LinearLayout>

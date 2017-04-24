@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CFL Score Tracker</string>
+    <string name="presented_by">Presented by MODASHMO</string>
+
+    <string name="home_team">Home</string>
+    <string name="away_team">Away</string>
+
+    <string name="score_touchdown">Touchdown (+7)</string>
+    <string name="score_fieldgoal">Field Goal (+3)</string>
+    <string name="score_extrapoint">Extra Point (+1)</string>
+
+    <string name="reset_button">Reset</string>
+
+</resources>

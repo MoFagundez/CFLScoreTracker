@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
     *
     *   LET'S GO BOMBERS!
     * */
-    int homeTeamScore, awayTeamScore;
+    int homeTeamScore;              // Track Home team score
+    int awayTeamScore;              // Track Away team score
     final int INITIAL_SCORE = 0;
     final int TOUCHDOWN = 7;
     final int FIELDGOAL = 3;

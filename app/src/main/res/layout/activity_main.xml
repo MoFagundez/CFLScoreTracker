@@ -21,8 +21,8 @@
         -->
         <ImageView
             android:id="@+id/cfl_logo"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="@dimen/standard_image_size"
+            android:layout_height="@dimen/standard_image_size"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/standard_text_margin"
